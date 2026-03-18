@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <img src="img/logo.svg" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+        <nav class="navigation">
+            <ul class="navigation__buttons">
+                <li class="navigation__button gost-button"><a href="#home">Home</a></li>
+                <li class="navigation__button gost-button"><a href="#about">About</a></li>
+                <li class="navigation__button gost-button"><a href="#feedbacks">Feedbacks</a></li>
+                <li class="navigation__button gost-button"><a href="/faq">F.A.Q.</a></li>
             </ul>
         </nav>
+
+        <div class="authorization-menu">
+            <div class="authorization-menu__button gost-button">Login</div>
+            <img src="img/icons/pipe.svg" alt="Pipe Icon">
+            <div class="authorization-menu__button gost-button">Register</div>
+        </div>
     </header>
 
-    <main>
-        <section id="home">
-        </section>
-
-        <section id="about">
-        </section>
-
-        <section id="contact">
+    <main class="content">
+        <section id="home" class="home">
+            <div class="introduction-text">
+                <div class="introduction-text__title">Get your  IT career goals done</div>
+                <div class="introduction-text__description">Flexible, individual online mentoring, which effectively prepares you for your future calls.</div>
+                <a href="" class="introduction-text__button button">Get free consultation</a>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="social-media-links">
+            <a class="asocial-media-links__link gost-button">Telegram channel</a>
+            <img src="img/icons/pipe.svg" alt="Pipe Icon">
+            <a class="asocial-media-links__link gost-button">Instagram</a>
+        </div>
     </footer>
 </body>
 </html>
