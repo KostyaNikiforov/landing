@@ -13,11 +13,74 @@ body {
     --secondary-color: #ACE9F8;
     --background-color: #F8FCFF;
     --danger-red: #CD2929;
+
+    --gost-1: #2E4F6A;
+    --gost-2: #8BA2B9;
+    --transparent-background-color: #F8FCFF40;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.scrollable-x {
+    overflow-x: auto;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.scrollable-x::-webkit-scrollbar {
+  display: none;
+  background: transparent; 
+}
+
+.title-h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.title-h2 {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.title-h3 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.title-h4 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.text-p1 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.text-gost {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gost-1);
 }
 
 .button {
@@ -30,12 +93,39 @@ a {
     width: max-content;
     padding: 12px 16px;
     border-radius: 16px;
+    outline: none;
+    border: none;
 
     &:hover {
         background-color: var(--primary-color-hover);
     }
 
     transition: background-color 0.2s ease;
+}
+
+.input {
+    border-radius: 32px;
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    background: transparent;
+    height: 40px;
+    width: 100%;
+    outline: none;
+
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: border 200ms ease-in-out;
+}
+
+.input:hover {
+    border: 1px solid var(--primary-color-hover);
+    outline: 1px solid var(--secondary-color);
+}
+
+.input::placeholder {
+  color: var(--gost-2);
 }
 
 .gost-button {
@@ -128,9 +218,6 @@ a {
 
     .introduction-text__title {
         width: 800px;
-        font-size: 56px;
-        font-weight: 700;
-        letter-spacing: -0.05em;
     }
 
     .introduction-text__description {
@@ -150,12 +237,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    .about-content__title {
-        font-size: 56px;
-        font-weight: 700;
-        color: var(--primary-color);
-    }
+    gap: 32px;
 
     .about-content__infomration-blockes {
         display: flex;
@@ -176,3 +258,185 @@ a {
         }
     }
 }
+
+.we-offer {
+    z-index: 1;
+    padding: 32px 80px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .we-offer__blockes {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    .we-offer__blockes-row {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .we-offer__block {
+        padding: 32px;
+        font-size: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+
+        height: 250px;
+        width: 518px;
+        border-radius: 16px;
+    }
+}
+
+.feed-back-section {
+    padding: 32px 0;
+    width: 100%;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+
+    .feed-back__blocks {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 32px;
+
+        width: max-content;
+        padding: 0 32px;
+    }
+
+    .feed-back__block {
+        padding: 32px;
+        font-size: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+
+        width: 445px;
+        height: 250px;
+        border-radius: 16px;
+    }
+
+    .feed-back__block-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+
+        .feed-back__block-header-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--background-color);
+        }
+
+        .feed-back__block-header-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+
+    .side-blur {
+        height: 100%;
+        width: 300px;
+        z-index: 1;
+        bottom: 0;
+
+        position: absolute;
+    }
+
+    .side-blur--left {
+        left: 0;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+
+    .side-blur--right {
+        right: 0;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    }
+}
+
+.send-application {
+    padding: 32px;
+    width: 100%;
+    height: calc(100vh);
+    min-height: max-content;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(0, var(--secondary-color) 10%, var(--background-color) 100%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    z-index: 1;
+
+    .send-application__title {
+        width: 675px;
+        text-align: center;
+    }
+
+    .send-application__diamond-lines {
+        position: absolute;
+        bottom: 65px;
+        left: -210px;
+        transform: rotate(90deg);
+    }
+
+    .send-application__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px
+    }
+
+    .send-application__form-card {
+        border-radius: 16px;
+        padding: 16px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        background-color: var(--transparent-background-color);
+    }
+
+    .send-application__form-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        padding: 8px;
+
+        width: 420px;
+    }
+
+    .send-application__form-item-lable {
+        font-weight: 700;
+    }
+}
+
