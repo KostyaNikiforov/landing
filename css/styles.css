@@ -168,6 +168,33 @@ a {
     }
 }
 
+.menu-button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    .menu-button__options {
+        position: absolute;
+        top: 34px;
+        left: -68px;
+
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+
+        border-radius: 16px;
+        background-color: var(--background-color);
+
+        padding: 8px;
+    }
+}
+
 .authorization-menu {
     display: flex;
     align-items: center;
@@ -197,7 +224,7 @@ a {
     }
 
     .home__diamond-lines--mobile {
-        top: 80px;
+        top: 10px;
         right: 0px;
     }
 }
@@ -208,7 +235,6 @@ a {
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 
     padding: 18px var(--side-padding);
 }
@@ -258,7 +284,6 @@ a {
     }
 
     .about-content__infomration-block {
-        padding: 32px;
         font-size: 20px;
         flex: 1;
         min-width: 400px;
@@ -286,7 +311,6 @@ a {
     .we-offer__blockes {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 64px;
         column-gap: 24px;
 
         width: 100%;
@@ -400,7 +424,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 32px
 
     z-index: 1;
 
@@ -430,7 +454,6 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 32px
     }
 
     .send-application__form-card {
@@ -466,4 +489,3 @@ a {
         font-weight: 700;
     }
 }
-

@@ -39,7 +39,9 @@
         font-size: 20px;
     }
 
-    .home__diamond-lines--desktop, .send-application__diamond-lines--desktop {
+    .home__diamond-lines--desktop,
+    .send-application__diamond-lines--desktop,
+    .send-application__diamond-lines--mobile {
         display: none;
     }
 
@@ -49,6 +51,26 @@
 
     .side-blur {
         display: none;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .about-content__infomration-block {
+        padding: 0;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .we-offer__blockes {
+        row-gap: 16px;
+    }
+
+    .send-application__form {
+        gap: 16px;
     }
 }
 
@@ -60,6 +82,26 @@
     .home__diamond-lines--mobile, .send-application__diamond-lines--mobile {
         display: none;
     }
+
+    .about-content__infomration-block {
+        padding: 24px;
+    }
+
+    .footer {
+        justify-content: flex-end;
+    }
+
+    .we-offer__blockes {
+        row-gap: 40px;
+    }
+
+    .send-application__form {
+        gap: 32px;
+    }
+
+    .menu-button {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -68,6 +110,26 @@
     }
 
     .home__diamond-lines--mobile, .send-application__diamond-lines--mobile {
+        display: none;
+    }
+
+    .about-content__infomration-block {
+        padding: 32px;
+    }
+
+    .footer {
+        justify-content: flex-end;
+    }
+
+    .we-offer__blockes {
+        row-gap: 64px;
+    }
+
+    .send-application__form {
+        gap: 32px;
+    }
+
+    .menu-button {
         display: none;
     }
 }
