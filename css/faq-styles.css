@@ -1,0 +1,76 @@
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    padding: 32px var(--side-padding);
+
+    .faq__qa-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .faq__qa-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 24px;
+
+        cursor: pointer;
+    }
+
+    .faq__qa-content {
+        overflow: hidden;
+        transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 24px 16px 24px;
+    }
+
+    .faq__qa {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 16px;
+        height: min-content;
+        
+        flex: 1;
+
+        transition: background 0.2s ease-out;
+    }
+
+    .faq__qa:not(.faq__qa--unclosable):hover {
+        background: var(--background-color-2);
+    }
+
+    .faq__qa-header-arrow {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .faq__qa--open:not(.faq__qa--unclosable) {
+        background: var(--background-color-2);
+    }
+
+    .faq__qa--open {
+        .faq__qa-content {
+            opacity: 1;
+            height: max-content;
+        }
+
+        .faq__qa-header-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    .faq__qa--close {
+        .faq__qa-content {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+        }
+    }
+}
