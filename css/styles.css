@@ -499,3 +499,61 @@ a {
         font-weight: 700;
     }
 }
+
+.dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background: #0005;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.dialog-container--shown {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dialog.dialog--open {
+    transform: translateY(0);
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 750px;
+    width: 100%;
+
+    border-radius: 16px;
+    background-color: var(--secondary-color);
+    
+    position: absolute;
+    transform: translateY(100px);
+
+    transition: transform 0.3s ease-in-out;
+
+    .dialog__header {
+        padding: 24px 24px 0 24px;
+    }
+
+    .dialog__content {
+        padding: 0 24px;
+    }
+
+    .dialog__footer {
+        padding: 0 24px 24px 24px;
+        display: flex;
+        justify-content: flex-end;
+    }
+ 
+    .dialog__primarry-button {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+    
