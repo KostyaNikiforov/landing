@@ -97,6 +97,12 @@ a {
     color: var(--gost-1);
 }
 
+.danger-text {
+    color: var(--danger-red);
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .button {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -493,6 +499,16 @@ a {
 
         width: 420px;
         max-width: 80%;
+
+        .danger-text {
+            display: none;
+        }
+    }
+
+    .send-application__form-item--invalid {
+        .danger-text {
+            display: block;
+        }
     }
 
     .send-application__form-item-lable {
