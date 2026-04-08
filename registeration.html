@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-mobile.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/logo.svg" alt="Logo" class="logo">
+        <nav class="navigation">
+            <ul class="navigation__buttons">
+                <li class="navigation__button gost-button"><a href="index.html">Home</a></li>
+                <li class="navigation__button gost-button"><a href="index.html#about">About</a></li>
+                <li class="navigation__button gost-button"><a href="index.html#we-offer">We offer</a></li>
+                <li class="navigation__button gost-button"><a href="index.html#feed-back">Feedbacks</a></li>
+                <li class="navigation__button gost-button"><a href="/faq.html">F.A.Q.</a></li>
+            </ul>
+        </nav>
+
+        <div class="authorization-menu">
+            <a class="authorization-menu__button gost-button" href="/login.html">Login</a>
+            <img src="img/icons/pipe.svg" alt="Pipe Icon">
+            <a class="authorization-menu__button gost-button" href="/registeration.html">Register</a>
+        </div>
+
+        <div id="menu-button" class="menu-button">
+            <img src="img/icons/burger-menu.svg" alt=" burger-mennu" class="">
+
+            <div class="menu-button__options">
+                <div class="menu-button__option">Home</div>
+                <div class="menu-button__option">About</div>
+                <div class="menu-button__option">Feedbacks</div>
+                <div class="menu-button__option">F.A.Q.</div>
+                <div class="menu-button__option">Login</div>
+                <div class="menu-button__option">Register</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="registration">
+            <div class="registration__title title-h2">Create profile</div>
+
+            <form class="registration__form" action="/handle-aplication" method="POST">
+                <div class="registration__form-card">
+                    <div class="registration__form-item">
+                        <lable class="registration__form-item-lable text-p1">Name</lable>
+                        <input class="input" placeholder="John Frusciante" name="fullname">
+                        <div class="danger-text">Required</div>
+                    </div>
+
+                    <div class="registration__form-item">
+                        <lable class="registration__form-item-lable text-p1">Phone number</lable>
+                        <input class="input" placeholder="+38 000 000-00-00" name="phone-number">
+                        <div class="danger-text">Required</div>
+                    </div>
+
+                    <div class="registration__form-item">
+                        <lable class="registration__form-item-lable text-p1">Email</lable>
+                        <input class="input" placeholder="john.frusciante@gamil.com" name="email">
+                        <div class="danger-text">Required</div>
+                    </div>
+
+                    <div class="registration__form-item">
+                        <lable class="registration__form-item-lable text-p1">Password</lable>
+                        <input class="input" placeholder="********" name="password" type="password">
+                        <div class="danger-text">Required</div>
+                    </div>
+                </div>
+
+                <div class="registration__buttons">
+                    <a  class="registration__button gost-button" href="/login.html">Login</a>
+                    <a id="registration-button" class="registration__button button">Registrer</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-media-links">
+            <a class="asocial-media-links__link gost-button">Telegram</a>
+            <img src="img/icons/pipe.svg" alt="Pipe Icon">
+            <a class="asocial-media-links__link gost-button">Instagram</a>
+        </div>
+    </footer>
+
+    <div id="dialog-container" class="dialog-container">
+        <div id="registration-success-dialog" class="dialog">
+            <div class="dialog__header">
+                <div class="title-h3">Registration is almost completed</div>
+            </div>
+            <div class="dialog__content text-p1">
+                We send you a verification email. Please, confirm it to complete registration.
+            </div>
+            <div class="dialog__footer">
+                <div class="dialog__primarry-button button">Ok</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/registration-form-script.js"></script>
+</body>
+</html>
