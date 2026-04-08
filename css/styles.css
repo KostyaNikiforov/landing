@@ -245,7 +245,7 @@ a {
     }
 
     .home__diamond-lines--mobile {
-        top: 10px;
+        top: 0px;
         right: 0px;
     }
 }

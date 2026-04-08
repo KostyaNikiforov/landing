@@ -57,6 +57,10 @@
         height: 60px;
     }
 
+    .footer {
+        height: 60px;
+    }
+
     .about-content__infomration-block {
         padding: 0;
     }
@@ -75,6 +79,10 @@
 
     .faq__qa {
         min-width: 300px;
+    }
+
+    .login-content, .registration-content {
+        min-height: calc(100vh - 120px);
     }
 }
 
@@ -110,6 +118,10 @@
     .faq__qa {
         min-width: 300px;
     }
+
+    .login-content, .registration-content {
+        min-height: calc(100vh - 176px);
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -144,5 +156,9 @@
     .faq__qa {
         min-width: 30%;
         max-width: 32%;
+    }
+
+    .login-content, .registration-content {
+        min-height: calc(100vh - 176px);
     }
 }

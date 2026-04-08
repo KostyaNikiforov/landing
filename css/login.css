@@ -1,5 +1,6 @@
-.content {
-    height: calc(100vh - 176px);
+.login-content {
+    background: var(--background-color);
+    overflow: auto;
 }
 
 .login {
@@ -9,13 +10,7 @@
     justify-content: center;
     gap: 32px;
 
-    height: 100%;
-
-    padding: 32px var(--side-padding);
-
-    .login__form {
-        width: 450px;
-    }
+    padding: 100px var(--side-padding);
 
     .login__form-item {
         .danger-text {
@@ -27,6 +22,9 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        max-width: 450px;
+        width: 100%;
     }
 
     .login__buttons {
