@@ -572,4 +572,22 @@ a {
         font-size: 16px;
     }
 }
+
+.introduction-text__button {
+    animation: pulsing 2s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
     
