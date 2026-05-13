@@ -1,3 +1,26 @@
+import * as formUtil from "./form-util.js";
+
+const formInputs = [
+    {
+        name: "Email",
+        validators: [
+            formUtil.required('Email is required'),
+        ]
+    },
+    {
+        name: "password",
+        validators: [
+            formUtil.required('Password is required'),
+            formUtil.minLength(6, 'Password must be at least 6 characters'),
+            formUtil.maxLength(50, 'Password must be less than 50 characters')
+        ]
+    },
+].reduce((acc, item) => {
+    acc[item.name] = item.validators;
+
+    return acc;
+}, {});
+
 const form = document.querySelector(".login__form");
 const appFormItems = form.getElementsByClassName("login__form-item");
 const loginButton = document.getElementById("login-button");
@@ -14,7 +37,7 @@ for (let item of appFormItems) {
     const input = item.querySelector(".input");
 
     input.addEventListener("input", (event) => {
-        validateInput(item.querySelector(".input"), item);
+        formUtil.validateInput(item, input, formInputs);
     });
 }
 
@@ -22,7 +45,7 @@ function validteForm() {
     var isValidResult = true;
 
     for (let item of appFormItems) {
-        const isValid = validateInput(item.querySelector(".input"), item);
+        const isValid = formUtil.validateInput(item, item.querySelector(".input"), formInputs);
 
         if (!isValid) {
             isValidResult = false;
@@ -30,20 +53,4 @@ function validteForm() {
     }
 
     return isValidResult;
-}
-
-function validateInput(input, item) {
-    if (isValidValue(input.value)) {
-        item.classList.remove("login__form-item--invalid");
-
-        return true;
-    } else {
-        item.classList.add("login__form-item--invalid");
-
-        return false;
-    }
-}
-
-function isValidValue(value) {
-    return !!value?.length;
 }

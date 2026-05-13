@@ -34,7 +34,7 @@
         gap: 16px;
     }
 
-    .login__form-item--invalid {
+    .form-item--invalid {
         .danger-text {
             display: block;
         }
