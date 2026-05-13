@@ -4,14 +4,14 @@ const formInputs = [
     {
         name: "email",
         validators: [
-            formUtil.required('Email is required'),
+            formUtil.required('Please enter your email'),
             formUtil.validEmail('Email is not valid')
         ]
     },
     {
         name: "password",
         validators: [
-            formUtil.required('Password is required'),
+            formUtil.required('Please enter your password'),
             formUtil.minLength(6, 'Password must be at least 6 characters'),
             formUtil.maxLength(50, 'Password must be less than 50 characters')
         ]
