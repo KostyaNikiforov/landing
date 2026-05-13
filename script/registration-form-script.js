@@ -13,6 +13,7 @@ const formInputs = [
         name: "email",
         validators: [
             formUtil.required('Email is required'),
+            formUtil.validEmail('Email is not valid')
         ]
     },
     {

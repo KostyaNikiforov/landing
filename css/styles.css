@@ -628,9 +628,15 @@ a {
         }
     }
 
-    .send-application__form-item-lable {
-        font-weight: 700;
+    .form-item--invalid {
+        .danger-text {
+            display: block;
+        }
     }
+}
+
+.send-application__form-item-lable {
+    font-weight: 700;
 }
 
 .dialog-container {
@@ -692,12 +698,6 @@ a {
 
 .introduction-text__button {
     animation: pulsing 2s infinite;
-}
-
-.form-item--invalid {
-    .danger-text {
-        display: block;
-    }
 }
 
 @keyframes pulsing {

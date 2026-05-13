@@ -2,9 +2,10 @@ import * as formUtil from "./form-util.js";
 
 const formInputs = [
     {
-        name: "Email",
+        name: "email",
         validators: [
             formUtil.required('Email is required'),
+            formUtil.validEmail('Email is not valid')
         ]
     },
     {

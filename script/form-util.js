@@ -23,7 +23,7 @@ function validateInput(item, input, formInputs = {}) {
         item.classList.remove("form-item--invalid");
     }
 
-    return !!errorMessage;
+    return !errorMessage;
 }
 
 function minLength(min, errorMessage) {
@@ -65,10 +65,23 @@ function phoneNumberMask(e) {
     e.target.value = !value[2] ? value[1] : value[1] + ' ' + value[2] + (value[3] ? '-' + value[3] : '') + (value[4] ? '-' + value[4] : '');
 }
 
+function validEmail(errorMessage) {
+    return (value) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(value)) {
+            return errorMessage;
+        }
+
+        return null;
+    }
+}
+
 export {
     validateInput,
     minLength,
     maxLength,
     required,
-    phoneNumberMask
+    phoneNumberMask,
+    validEmail
 };
